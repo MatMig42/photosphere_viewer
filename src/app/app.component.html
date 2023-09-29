@@ -1,2 +1,17 @@
-<app-mainzer-in-nw></app-mainzer-in-nw>
+<mat-sidenav-container color="primary">
+    <mat-sidenav #sidenav mode="side" opened=true>
+        <p *ngFor="let room of roomList | keyvalue">
+            <button mat-button class="nav-link" [routerLink]="'/room/' + room.key" routerLinkActive="active"
+                color="primary">{{room.value}}</button>
+        </p>
+    </mat-sidenav>
+    <mat-sidenav-content color="primary">
+        <div class="container" style="height: 100vh;">
+            <div class="row" style="padding-left: 10px; padding-top: 10px">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
 

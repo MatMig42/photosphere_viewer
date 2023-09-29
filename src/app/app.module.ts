@@ -4,17 +4,24 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MainzerInNwComponent } from './views/mainzer-in-nw/mainzer-in-nw.component';
+import { SingleSphereComponent } from './views/single_sphere/single_sphere.component';
+
+import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatButtonModule} from '@angular/material/button';
+import { RoomComponent } from './views/room/room.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainzerInNwComponent
+    SingleSphereComponent,
+    RoomComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatSidenavModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
