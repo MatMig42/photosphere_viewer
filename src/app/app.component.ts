@@ -60,10 +60,11 @@ export class AppComponent {
   }
 
   navigateToRoom(room: string, imageName: string) {
-    this.router.navigate(['/room'], {
-      queryParams: {room: room, imageName: imageName}
-    }).then(() =>
-      {window.location.reload()}
-    );
+    this.router.navigate(['/room/'], {
+      relativeTo: this.route,
+      queryParams: {room: room, imageName: imageName},
+    })
+    this.room = room;
+    this.imageName = imageName
   }
 }

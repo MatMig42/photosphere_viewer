@@ -18,8 +18,9 @@
     </mat-sidenav>
     <mat-sidenav-content color="primary">
         <div class="container" style="height: 100vh;">
-            <div class="row" style="padding-left: 10px; padding-top: 10px">
+            <div class="row" style="padding-left: 10px; padding-top: 10px" *ngIf="this.room">
                 <router-outlet></router-outlet>
+                <!-- <app-room [room]="this.room" [imageName]="this.imageName"></app-room> -->
             </div>
         </div>
     </mat-sidenav-content>

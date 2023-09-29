@@ -3,7 +3,7 @@ import { RouterModule, Routes, provideRouter, withComponentInputBinding } from '
 import { RoomComponent } from './views/room/room.component';
 
 const routes: Routes = [
-  { path: '',   redirectTo: '/room?room=Hof&imageName=PXL_20230426_153423371.PHOTOSPHERE.jpg', pathMatch: 'full' },
+  { path: '',   redirectTo: '/?room=Hof&imageName=PXL_20230413_164228630.PHOTOSPHERE.jpg', pathMatch: 'full' },
   { path: 'room', component: RoomComponent}
 ];
 

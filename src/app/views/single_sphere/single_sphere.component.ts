@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 import { Viewer, ViewerConfig } from '@photo-sphere-viewer/core';
 
 @Component({
@@ -16,6 +16,13 @@ export class SingleSphereComponent implements OnInit {
         container: document.querySelector('#viewer'),
         panorama: 'assets/' + this.imagePath,
       } as ViewerConfig);
+    }
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (this.viewer) {
+      this.viewer.destroy();
+      this.ngOnInit();
     }
   }
 }

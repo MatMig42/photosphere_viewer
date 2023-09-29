@@ -35,8 +35,7 @@
               "src/theme.scss",
               "src/styles.scss"
             ],
-            "scripts": [],
-            "baseHref": "https://matmig42.github.io/photosphere_viewer/"
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -111,6 +110,9 @@
               "src/**/*.html"
             ]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }

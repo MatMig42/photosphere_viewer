@@ -11,7 +11,6 @@ export class RoomComponent implements OnInit {
   @Input() imageName: string = '';
   
 
-  ngOnInit() {
-  }
+  ngOnInit() {  }
 
 }
