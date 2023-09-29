@@ -1,9 +1,20 @@
 <mat-sidenav-container color="primary">
-    <mat-sidenav #sidenav mode="side" opened=true>
-        <p *ngFor="let room of roomList | keyvalue">
-            <button mat-button class="nav-link" [routerLink]="'/room/' + room.key" routerLinkActive="active"
-                color="primary">{{room.value}}</button>
-        </p>
+    <mat-sidenav #sidenav mode="side" [opened]="this.roomImages.size > 0">
+        <div *ngFor="let roomIterator of roomList | keyvalue">
+            <div *ngIf="this.roomImages.has(roomIterator.key)">
+                <button mat-button class="nav-link" (click)="navigateToRoom(roomIterator.key, this.roomImages.get(roomIterator.key)![0])"
+                    color="primary">
+                    <b>{{roomIterator.value}}</b>
+                </button>
+            </div>
+            <div *ngIf="this.room != '' && roomIterator.key == this.room">
+                <div  *ngFor="let image of this.roomImages.get(this.room)">
+                  <button mat-button class="nav-link" (click)="navigateToRoom(roomIterator.key, image)" color="secondary" style="padding-left:25px">
+                    {{image}}
+                  </button>
+                </div>
+            </div>
+        </div>
     </mat-sidenav>
     <mat-sidenav-content color="primary">
         <div class="container" style="height: 100vh;">

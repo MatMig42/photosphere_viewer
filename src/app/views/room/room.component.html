@@ -1,1 +1,1 @@
-<app-single-sphere [imagePath]="this.room + '/' + this.imageName + '.jpg'"></app-single-sphere>
+<app-single-sphere [imagePath]="this.room + '/' + this.imageName" *ngIf="this.room != '' && this.imageName != ''"></app-single-sphere>

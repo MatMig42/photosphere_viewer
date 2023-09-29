@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-room',
@@ -8,26 +7,11 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class RoomComponent implements OnInit {
 
-  public room: string = 'Hof';
-  public imageName: string = '';
-
-
-  constructor(
-    private route: ActivatedRoute 
-  ) {
-    this.route.paramMap.subscribe(params => {
-        if (params.has('roomID')){
-          this.room = params.get("roomID")!
-        }
-        if (params.has('ImageID')){
-          this.imageName = params.get("ImageID")!
-        }
-      });
-  }
+  @Input() room: string = '';
+  @Input() imageName: string = '';
+  
 
   ngOnInit() {
-    console.log(this.room)
-    console.log(this.imageName)
   }
 
 }
