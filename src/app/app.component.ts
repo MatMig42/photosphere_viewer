@@ -42,7 +42,7 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    this.http.get('/assets/image_list.json').subscribe(res => {
+    this.http.get('https://matmig42.github.io/photosphere_viewer/assets/image_list.json').subscribe(res => {
       this.file_list = res;
       
       this.roomImages = new Map();
