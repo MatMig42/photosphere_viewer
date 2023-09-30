@@ -23,8 +23,7 @@ export class SingleSphereComponent implements OnInit {
 
   ngOnChanges(changes: SimpleChanges) {
     if (this.viewer) {
-      this.viewer.destroy();
-      this.ngOnInit();
+      this.viewer.setPanorama('assets/' + this.imagePath, { transition: true })
     }
   }
 }
