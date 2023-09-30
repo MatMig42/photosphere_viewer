@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, ParamMap, Router, RoutesRecognized } from '@angular/router';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,9 @@ import { ActivatedRoute, ParamMap, Router, RoutesRecognized } from '@angular/rou
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  @ViewChild(MatSidenav)
+  sidenav!: MatSidenav;
+
   title = 'Mandelring 10';
   roomList = {
     "Hof": "Hof",
@@ -66,5 +70,8 @@ export class AppComponent {
     })
     this.room = room;
     this.imageName = imageName
+  }
+  toggleSideNav() {
+    this.sidenav.toggle();
   }
 }

@@ -1,3 +1,8 @@
+<div>
+    <button mat-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+</div>
 <mat-sidenav-container color="primary">
     <mat-sidenav #sidenav mode="side" [opened]="this.roomImages.size > 0">
         <div *ngFor="let roomIterator of roomList | keyvalue">

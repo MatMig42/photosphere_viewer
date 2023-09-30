@@ -8,6 +8,7 @@ import { SingleSphereComponent } from './views/single_sphere/single_sphere.compo
 
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatButtonModule} from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 import { RoomComponent } from './views/room/room.component';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -24,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MatSidenavModule,
     MatButtonModule,
+    MatIconModule,
     HttpClientModule
   ],
   providers: [],
