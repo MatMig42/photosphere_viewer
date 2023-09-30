@@ -1,1 +1,3 @@
-$psv-navbar-width: 50%;
+:host ::ng-deep .psv-navbar {
+    position: relative !important;
+}
