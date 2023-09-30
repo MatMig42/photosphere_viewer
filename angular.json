@@ -35,8 +35,7 @@
               "src/theme.scss",
               "src/styles.scss"
             ],
-            "scripts": [],
-            "baseHref": "https://matmig42.github.io/photosphere_viewer/"
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -52,7 +51,8 @@
                   "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "baseHref": "https://matmig42.github.io/photosphere_viewer/"
             },
             "development": {
               "buildOptimizer": false,
